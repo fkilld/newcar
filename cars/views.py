@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Car
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
+
 # Create your views here.
 def cars(request):
     cars = Car.objects.order_by('-created_date')
@@ -21,7 +22,8 @@ def cars(request):
         'year_search': year_search,
         'body_style_search': body_style_search,
     }
-    return render(request, 'cars/cars.html',data)
+    return render(request, 'cars/cars.html', data)
+
 
 def car_detail(request, id):
     single_car = get_object_or_404(Car, pk=id)
@@ -29,7 +31,8 @@ def car_detail(request, id):
     data = {
         'single_car': single_car,
     }
-    return render(request, 'cars/car_deatil.html',data)
+    return render(request, 'cars/car_deatil.html', data)
+
 
 def search(request):
     cars = Car.objects.order_by('-created_date')

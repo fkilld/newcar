@@ -10,7 +10,7 @@
         <div class="breadcrumb-areas">
             <h1>{{ single_car.car_title }}</h1>
             <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li class="active">{{ single_car.car_title }}</li>
             </ul>
         </div>
@@ -104,9 +104,6 @@
                         </div>
                     </div>
 
-                            </ul>
-                        </div>
-                    </div>
 
                     <!-- Tabbing box start -->
                     <div class="tabbing tabbing-box mb-40">
@@ -160,7 +157,7 @@
                         <button class="btn btn-outline-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send message</button>
 
 
-                                                <br>
+                         <br>
                         <h3 class="sidebar-title">Refine Your Search</h3>
                         <ul>
                             <li>
@@ -202,7 +199,6 @@
                             <li>
                                 <span>Milage: </span>{{single_car.milage}}
                             </li>
-
                             <li>
                                 <span>Fuel Type: </span>{{single_car.fuel_type}}
                             </li>
